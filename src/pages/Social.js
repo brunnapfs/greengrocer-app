@@ -14,7 +14,7 @@ const Social = () => {
       <div className="social-buttons">
         <button onClick={() => handleShare('Facebook')}>Compartilhar no Facebook</button>
         <button onClick={() => handleShare('Twitter')}>Compartilhar no Twitter</button>
-        {/* Adicione mais botões de compartilhamento conforme necessário */}
+        
       </div>
     </div>
   );

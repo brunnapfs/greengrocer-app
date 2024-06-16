@@ -1,9 +1,9 @@
 /* src/App.css */
 body {
-  background-color: #e0f2f1; /* Cor verde claro desejada */
-  margin: 0; /* Remove margens padrão do body */
-  padding: 0; /* Remove preenchimentos padrão do body */
-  font-family: Arial, sans-serif; /* Escolha a fonte desejada */
+  background-color: #e0f2f1; 
+  margin: 0; 
+  padding: 0; 
+  font-family: Arial, sans-serif; 
 }
 
 .App {

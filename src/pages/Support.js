@@ -5,7 +5,7 @@ import '../styles/Support.css';
 const Support = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lógica para enviar mensagem de suporte
+
     alert('Mensagem de suporte enviada');
   };
 
