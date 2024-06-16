@@ -1,39 +1,59 @@
-// src/pages/Checkout.js
-import React, { useState } from 'react';
-import '../styles/Form.css';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../context/CartContext';
+import '../styles/Checkout.css';
 
 const Checkout = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    address: '',
-    city: '',
-    paymentMethod: ''
-  });
+  const { getTotalPrice } = useContext(CartContext);
+  const [address, setAddress] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState('credit_card');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Formulário de checkout enviado:', formData);
-    // Aqui você pode adicionar a lógica para enviar o pedido para o backend ou simular o checkout
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      alert('Compra confirmada!'); // Simula a confirmação da compra
+    }, 2000);
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  if (loading) {
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
 
   return (
-    <div className="form-container">
-      <h2>Checkout</h2>
+    <div className="checkout-container">
+      <h2>Finalizar Compra</h2>
+      <p>Total a pagar: R${getTotalPrice()}</p>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="fullName" placeholder="Nome Completo" value={formData.fullName} onChange={handleChange} required />
-        <input type="text" name="address" placeholder="Endereço de Entrega" value={formData.address} onChange={handleChange} required />
-        <input type="text" name="city" placeholder="Cidade" value={formData.city} onChange={handleChange} required />
-        <select name="paymentMethod" value={formData.paymentMethod} onChange={handleChange} required>
-          <option value="">Selecione o Método de Pagamento</option>
-          <option value="credit-card">Cartão de Crédito</option>
-          <option value="debit-card">Cartão de Débito</option>
-          <option value="paypal">PayPal</option>
-        </select>
-        <button type="submit">Finalizar Compra</button>
+        <div className="form-group">
+          <label htmlFor="address">Endereço de Entrega:</label>
+          <input
+            type="text"
+            id="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="payment-method">Método de Pagamento:</label>
+          <select
+            id="payment-method"
+            value={paymentMethod}
+            onChange={(e) => setPaymentMethod(e.target.value)}
+            required
+          >
+            <option value="credit_card">Cartão de Crédito</option>
+            <option value="debit_card">Cartão de Débito</option>
+            <option value="paypal">PayPal</option>
+          </select>
+        </div>
+        <button type="submit" className="btn-confirm">Confirmar Compra</button>
       </form>
     </div>
   );

@@ -1,9 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import Spinner from '../components/Spinner';
 import '../styles/Cart.css';
 
 const Cart = () => {
   const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      navigate('/checkout');
+    }, 2000); // Simula 2 segundos de carregamento
+  };
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div className="cart-container">
@@ -26,8 +42,11 @@ const Cart = () => {
         )}
       </div>
       {cartItems.length > 0 && (
-        <div className="cart-total">
+        <div className="cart-summary">
           <h3>Total: R${getTotalPrice()}</h3>
+          <button className="btn-checkout" onClick={handleCheckout}>
+            Finalizar Compra
+          </button>
         </div>
       )}
     </div>
