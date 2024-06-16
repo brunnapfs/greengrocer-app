@@ -31,6 +31,21 @@ const Promotions = () => {
           <p>Desconto especial de 15% para membros do clube em nosso mel orgânico. Doçura natural e pura!</p>
           <Link to="/products" className="btn-offer">Conferir Oferta</Link>
         </div>
+        <div className="promotion-item">
+          <img src="https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2021/09/12/1459546844-mamao.jpg" alt="Promoção 5" className="promotion-image" />
+          <h3>Mamão</h3>
+          <p>Aproveite esta oportunidade única de levar para casa mamões de alta qualidade por apenas R$ 2,99 cada!</p>
+          <Link to="/products" className="btn-offer">Conferir Oferta</Link>
+        </div>
+        <div className="promotion-item">
+          <img src="https://conteudo.imguol.com.br/c/entretenimento/4e/2020/03/23/pera-1584989626321_v2_4x3.jpg" alt="Promoção 5" className="promotion-image" />
+          <h3>Pêra</h3>
+          <p>Leve para casa nossas pêras por apenas R$ 1.50!</p>
+          <Link to="/products" className="btn-offer">Conferir Oferta</Link>
+        </div>
+        
+        
+        
       </div>
     </div>
   );

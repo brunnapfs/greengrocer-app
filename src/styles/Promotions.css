@@ -20,8 +20,8 @@
 
 .promotion-image {
   width: 100%;
-  height: 200px; /* Defina uma altura fixa para todas as imagens */
-  object-fit: cover; /* Garante que a imagem mantenha sua proporção e cubra a área */
+  height: 200px; 
+  object-fit: cover; 
   border-radius: 5px;
   margin-bottom: 10px;
 }

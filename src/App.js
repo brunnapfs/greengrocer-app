@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -17,16 +17,36 @@ import { CartProvider } from './context/CartContext';
 import './App.css';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
+      </Router>
+    );
+  }
+
   return (
     <CartProvider>
       <Router>
         <div className="App">
-          <Navbar />
+          <Navbar onLogout={handleLogout} />
           <div className="content">
             <Routes>
-              <Route path="/login" element={<Login />} />
               <Route path="/" element={<Home />} />
-              <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/products" element={<Products />} />
               <Route path="/cart" element={<Cart />} />
@@ -36,6 +56,7 @@ function App() {
               <Route path="/promotions" element={<Promotions />} />
               <Route path="/social" element={<Social />} />
               <Route path="/support" element={<Support />} />
+              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </div>
         </div>

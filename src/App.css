@@ -1,15 +1,31 @@
-/* src/App.css */
+/* Adicione este estilo ao seu App.css ou ao arquivo CSS principal */
+
 body {
-  background-color: #e0f2f1; 
-  margin: 0; 
-  padding: 0; 
-  font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.hortifrutidiretodocampo.com.br/wp-content/uploads/2021/10/2-unidades-do-hortifruti.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .App {
-  margin: 20px;
+  min-height: 100vh;
 }
 
 .content {
-  margin-top: 20px;
+  padding: 20px;
+}
+
+.form-container,
+.support-container,
+.product-card,
+.faq-item,
+.home-container,
+.promotions-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

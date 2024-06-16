@@ -27,6 +27,7 @@ const Checkout = () => {
 
   return (
     <div className="checkout-container">
+      <h3>Checkout</h3>
       <h2>Finalizar Compra</h2>
       <p>Total a pagar: R${getTotalPrice()}</p>
       <form onSubmit={handleSubmit}>
