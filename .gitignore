@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+
+# Arquivos de build
+/build
+/dist
+
+# Arquivos de ambiente local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Outros arquivos gerados automaticamente
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac OS
+.DS_Store
+
+# Arquivos de cache
+.cache/
