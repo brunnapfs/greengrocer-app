@@ -1,14 +1,9 @@
-// src/pages/Cart.js
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import '../styles/Cart.css';
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
-
-  const handleRemoveItem = (itemId) => {
-    const updatedCart = cartItems.filter(item => item.id !== itemId);
-    setCartItems(updatedCart);
-  };
+  const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
 
   return (
     <div className="cart-container">
@@ -19,16 +14,24 @@ const Cart = () => {
         ) : (
           cartItems.map(item => (
             <div key={item.id} className="cart-item">
-              <h3>{item.name}</h3>
-              <p>Quantidade: {item.quantity}</p>
-              <button onClick={() => handleRemoveItem(item.id)}>Remover</button>
+              <img src={item.image} alt={item.title} className="cart-item-image" />
+              <div className="cart-item-details">
+                <h3>{item.title}</h3>
+                <p>Quantidade: {item.quantity}</p>
+                <p>Preço: R${(item.price * item.quantity).toFixed(2)}</p>
+                <button onClick={() => removeFromCart(item.id)}>Remover</button>
+              </div>
             </div>
           ))
         )}
       </div>
+      {cartItems.length > 0 && (
+        <div className="cart-total">
+          <h3>Total: R${getTotalPrice()}</h3>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Cart;
-

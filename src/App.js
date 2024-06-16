@@ -13,31 +13,34 @@ import Reviews from './pages/Reviews';
 import Promotions from './pages/Promotions';
 import Social from './pages/Social';
 import Support from './pages/Support';
+import { CartProvider } from './context/CartContext';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Routes>
-            <Route path="/login" element={<Login />} /> {/* Login é a primeira rota */}
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/orders" element={<Orders />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/promotions" element={<Promotions />} />
-            <Route path="/social" element={<Social />} />
-            <Route path="/support" element={<Support />} />
-          </Routes>
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className="content">
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/reviews" element={<Reviews />} />
+              <Route path="/promotions" element={<Promotions />} />
+              <Route path="/social" element={<Social />} />
+              <Route path="/support" element={<Support />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </CartProvider>
   );
 }
 

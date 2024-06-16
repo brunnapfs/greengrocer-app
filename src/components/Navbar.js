@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
@@ -6,6 +5,10 @@ import '../styles/Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <div className="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-qEWPVOMVnojsN1F-IhCOjx5-pJTA_EwXQQ&s" alt="Logo" className="logo-image" />
+        <span className="logo-title">GreenGrocer</span>
+      </div>
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link to="/" className="nav-link">Início</Link>
@@ -36,7 +39,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link to="/support" className="nav-link">Suporte</Link>
-        </li> 
+        </li>
         <li className="nav-item">
           <Link to="/login" className="nav-link">Login</Link>
         </li>

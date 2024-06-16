@@ -1,6 +1,5 @@
-// src/pages/Reviews.js
 import React, { useState } from 'react';
-import '../styles/Form.css';
+import '../styles/Reviews.css';
 
 const Reviews = () => {
   const [review, setReview] = useState('');
@@ -12,9 +11,35 @@ const Reviews = () => {
     // Aqui você pode adicionar a lógica para enviar a avaliação para o backend ou simular o envio
   };
 
+  const renderStars = (count) => {
+    return '★'.repeat(count) + '☆'.repeat(5 - count);
+  };
+
   return (
-    <div className="form-container">
-      <h2>Comentários e Sugestões</h2>
+    <div className="reviews-container">
+      <h2>O que nossos usuários dizem?</h2>
+      <div className="reviews">
+        <div className="review-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRU7fHqjl9ZNnunEad4pqSMySAMY49WkJ31A&s" alt="Celia Almeida" className="profile-photo" />
+          <h3>Celia Almeida</h3>
+          <p>Secretário</p>
+          <p>Ótimos produtos e excelente atendimento! ★★★★☆</p>
+        </div>
+        <div className="review-card">
+          <img src="https://smartcdn.gprod.postmedia.digital/torontosun/wp-content/uploads/2024/01/natalie_reynolds_body_paint_gym-e1704226634239.jpg?quality=100&strip=all" alt="Nat Reynolds" className="profile-photo" />
+          <h3>Nat Reynolds</h3>
+          <p>Contador chefe</p>
+          <p>Variedade incrível e qualidade incomparável. ★★★★★</p>
+        </div>
+        <div className="review-card">
+          <img src="https://i.ytimg.com/vi/QRizQTLmAMU/maxresdefault.jpg" alt="Bob Roberts" className="profile-photo" />
+          <h3>Bob Roberts</h3>
+          <p>Gerente de vendas</p>
+          <p>Preço justo e entrega rápida. ★★★☆☆</p>
+        </div>
+      </div>
+
+      <h2>Deixe sua Avaliação</h2>
       <form onSubmit={handleSubmit}>
         <textarea
           placeholder="Digite sua sugestão"
@@ -22,16 +47,8 @@ const Reviews = () => {
           onChange={(e) => setReview(e.target.value)}
           required
         ></textarea>
-        <h2> Avalie de 1 a 5</h2>
-        <input
-          type="number"
-          placeholder="Classificação (1-5)"
-          value={rating}
-          onChange={(e) => setRating(parseInt(e.target.value))}
-          min="1"
-          max="5"
-          required
-        />
+        
+    
         <button type="submit">Enviar Avaliação</button>
       </form>
     </div>

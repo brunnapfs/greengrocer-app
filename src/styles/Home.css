@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-container {
+    text-align: center;
+    background-color: #e0f2f1;
+  }
+  
+  .hero-section {
+    padding: 50px 20px;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .partners-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+  }
+  
+  .partners-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #2d3e50;
+  }
+  
+  .partners-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .partners-logos img {
+    height: 50px;
+    margin: 0 10px;
+  }
+  

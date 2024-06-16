@@ -1,33 +1,31 @@
 import React, { useState } from 'react';
+import '../styles/ProductCard.css';
 
 const ProductCard = ({ product, addToCart }) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
     addToCart(product, quantity);
-    setQuantity(1); // Reinicia a quantidade para 1 após adicionar ao carrinho
-  };
-
-  const handleQuantityChange = (e) => {
-    const value = parseInt(e.target.value, 10);
-    if (!isNaN(value) && value >= 1) {
-      setQuantity(value);
-    }
   };
 
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.title} className="product-image" />
       <h3>{product.title}</h3>
+      <img src={product.image} alt={product.title} />
       <p>{product.description}</p>
-      <p>Preço: R$ {product.price.toFixed(2)}</p>
-      <input
-        type="number"
-        min="1"
-        value={quantity}
-        onChange={handleQuantityChange}
-      />
-      <button type="button" onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+      <p>Preço: R${product.price.toFixed(2)}</p>
+      <div className="quantity-input-container">
+        <input
+          type="number"
+          className="quantity-input"
+          value={quantity}
+          onChange={(e) => setQuantity(parseInt(e.target.value))}
+          min="1"
+        />
+      </div>
+      <div className="add-to-cart-button">
+        <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+      </div>
     </div>
   );
 };
