@@ -20,7 +20,7 @@ const Cart = () => {
           cartItems.map(item => (
             <div key={item.id} className="cart-item">
               <h3>{item.name}</h3>
-              <p>Quantidade: {item.quantity}</p>
+              <p>Quanti: {item.quantity}</p>
               <button onClick={() => handleRemoveItem(item.id)}>Remover</button>
             </div>
           ))
