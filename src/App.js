@@ -16,6 +16,7 @@ import Social from './pages/Social';
 import Support from './pages/Support';
 import { CartProvider } from './context/CartContext';
 import './App.css';
+import Chat from './components/chat';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -58,6 +59,7 @@ function App() {
               <Route path="/social" element={<Social />} />
               <Route path="/support" element={<Support />} />
               <Route path="*" element={<Navigate to="/" />} />
+              <Route path='/chat' element={<Chat/>}></Route>
             </Routes>
           </div>
           <Footer/>

@@ -27,22 +27,13 @@ const Navbar = ({ onLogout }) => {
           <Link to="/cart" className="nav-link">🛒</Link>
         </li>
         <li className="nav-item">
-          <Link to="/promotions" className="nav-link">Promoções</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/orders" className="nav-link">Meus Pedidos</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/reviews" className="nav-link">Avaliações</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/social" className="nav-link">Redes Sociais</Link>
-        </li>
-        <li className="nav-item">
           <Link to="/profile" className="nav-link">Perfil</Link>
         </li>
         <li className="nav-item">
           <Link to="/support" className="nav-link">Suporte</Link>
+        </li>
+        <li>
+          <Link to={'/chat'}>Chat</Link>
         </li>
         <li className="nav-item">
           <button onClick={handleLogout} className="nav-link btn-logout">Sair</button>

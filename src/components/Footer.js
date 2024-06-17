@@ -1,5 +1,7 @@
 import React from "react";
 import '../styles/Footer.css';
+import { Link } from "react-router-dom";
+import Support from '../pages/Support'
 
 export function Footer() {
     return (
@@ -10,6 +12,9 @@ export function Footer() {
                 <address>
                     5534 Somewhere In. The World 22193-10212<br />
                     <a className="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+                    <Link to={'/Support'} className="btnSuporte">
+                        Suporte
+                    </Link>
                 </address>
             </div>
             

@@ -1,6 +1,8 @@
 // src/pages/Orders.js
 import React, { useState, useEffect } from 'react';
 import '../styles/Orders.css';
+import Support from './Support'
+import { Link } from 'react-router-dom';
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -30,6 +32,11 @@ const Orders = () => {
             <p>Status: {order.status}</p>
           </div>
         ))}
+      </div>
+      <div className='btntLink'>
+      <Link to={'/Support'} className='btnSuporte'>
+        Suporte
+       </Link>
       </div>
     </div>
   );
