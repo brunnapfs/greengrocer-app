@@ -1,0 +1,76 @@
+.profile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-photo, .profile-photo-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .profile-photo {
+    object-fit: cover;
+  }
+  
+  .file-input {
+    margin-bottom: 10px;
+  }
+  
+  .text-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .edit-button, .save-button {
+    padding: 10px 20px;
+    background: #19a838;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .edit-button:hover, .save-button:hover {
+    background: #19a838;
+  }
+  
+  @media (max-width: 500px) {
+    .profile-container {
+      padding: 10px;
+    }
+  
+    .text-input {
+      padding: 8px;
+    }
+  
+    .edit-button, .save-button {
+      padding: 8px 16px;
+    }
+  }

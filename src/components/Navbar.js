@@ -24,7 +24,7 @@ const Navbar = ({ onLogout }) => {
           <Link to="/products" className="nav-link">Produtos</Link>
         </li>
         <li className="nav-item">
-          <Link to="/cart" className="nav-link">Carrinho</Link>
+          <Link to="/cart" className="nav-link">🛒</Link>
         </li>
         <li className="nav-item">
           <Link to="/promotions" className="nav-link">Promoções</Link>

@@ -1,5 +1,5 @@
 .products-container {
-  max-width: 800px;
+  width: 1500px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
@@ -19,25 +19,32 @@
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #51a957;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
-  width: 200px; 
+  width: 500px; 
   margin-left: auto; 
 }
 
 .search-bar input[type="text"] {
+  background-color: #51a957;
   flex: 1;
   border: none;
   outline: none;
   padding: 5px;
   font-size: 14px; 
+  appearance: none;
+  color: #ffffff;
+}
+.search-bar input[type="text"]::placeholder {
+  color: #ffffff;
+  opacity: 1;
 }
 
 .search-bar i {
   padding: 5px;
-  color: #888;
+  color: #fff5f5;
   cursor: pointer;
 }
 
@@ -97,4 +104,19 @@
 
 .product-card button:hover {
   background-color: #218838;
+}
+.btnCart{
+  background-color: #218838;
+  margin-top: 50px;
+  border: 1px;
+  border-radius: 10px;
+  width: 500px;
+  padding: 20px;
+  color: #ffffff;
+
+}
+
+.btnCart:hover{
+  cursor: pointer;
+  background-color: #1f562b;
 }

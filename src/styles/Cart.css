@@ -16,27 +16,30 @@
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
+  margin: 5px;
 }
 
 .cart-item-image {
   width: 100px;
   height: auto;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-right: 20px;
 }
 
 .cart-item-details {
   text-align: left;
+  margin: 5px;
 }
 
 .cart-item-details h3 {
   margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .cart-item-details p {
-  margin: 5px 0;
+  margin-top: 10px 0;
 }
 
 .cart-summary {
@@ -51,10 +54,41 @@
   background-color: #105706;
   text-decoration: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  width: 380px;
 }
 
 .btn-checkout:hover {
   background-color: #0a3d04;
+}
+
+.btnMeusPedidos{
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #043318;
+  padding: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+.btnMeusPedidos:hover{
+  background-color: #1e4c2c;
+  cursor: pointer;
+}
+.btnRemover{
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  background-color: #1e4c2c;
+
+}
+.btnRemover:hover{
+  background-color: #0e2315;
+  cursor: pointer;
 }

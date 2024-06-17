@@ -1,10 +1,28 @@
+// src/pages/Home.js
 import React from 'react';
 import '../styles/Home.css';
+import { Link } from 'react-router-dom';
+import Social from './Social';
+import Reviews from './Reviews';
+import PromotionsCarrousel from '../components/CarrouselPromotios';
 
 const Home = () => {
   return (
     <div className="home-container">
-      
+      <h2>Bem Vindo ao GreenGrocer</h2>
+      <h4>O melhor lugar pra você comprar mais barato</h4>
+      <div className="home-section">
+        <h4>Confira nossos produtos <Link to="/products" className='link'>aqui</Link></h4>
+      </div>
+      <div className="home-section">
+        <PromotionsCarrousel />
+      </div>
+      <div className="home-section">
+        <Social />
+      </div>
+      <div className="home-section">
+        <Reviews />
+      </div>
       <div className="partners-section">
         <h3>Parceiros que confiam na GreenGrocer</h3>
         <div className="partners-logos">

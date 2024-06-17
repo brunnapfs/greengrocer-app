@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import Spinner from '../components/Spinner';
 import '../styles/Cart.css';
+import Orders from './Orders';
 
 const Cart = () => {
   const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
@@ -35,7 +36,7 @@ const Cart = () => {
                 <h3>{item.title}</h3>
                 <p>Quantidade: {item.quantity}</p>
                 <p>Preço: R${(item.price * item.quantity).toFixed(2)}</p>
-                <button onClick={() => removeFromCart(item.id)}>Remover</button>
+                <button onClick={() => removeFromCart(item.id)} className='btnRemover'>Remover</button>
               </div>
             </div>
           ))
@@ -49,6 +50,9 @@ const Cart = () => {
           </button>
         </div>
       )}
+      <span>
+        <Link to={'/Orders'} className='btnMeusPedidos'>Meus Pedidos</Link>
+      </span>
     </div>
   );
 };
