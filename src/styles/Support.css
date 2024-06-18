@@ -61,3 +61,17 @@
   border-radius: 5px;
   border-top: none;
 }
+.btnVoltar{
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #4caf50; /* Cor verde para o botão */
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+.btnVoltar:hover{
+  cursor: pointer;
+  background-color: #0a3d04;
+}

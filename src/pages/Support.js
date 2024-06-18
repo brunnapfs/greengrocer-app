@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Support.css';
+import Cart from './Cart'
+import { Link } from 'react-router-dom';
 
 const Support = () => {
   const [faq, setFaq] = useState([
@@ -54,6 +56,7 @@ const Support = () => {
           </div>
         ))}
       </div>
+      <Link to={'/orders'} className='btnVoltar'>Voltar</Link>
     </div>
   );
 };

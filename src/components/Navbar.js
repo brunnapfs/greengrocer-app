@@ -15,7 +15,7 @@ const Navbar = ({ onLogout }) => {
     <nav className="navbar">
       <div className="logo">
         <img
-          src="https://img.freepik.com/fotos-premium/diseno-logotipos-verduras-frutas-frescas-vibrantes-ia-generativa_627719-3667.jpg"
+          src="/greegrocer.ico"
           alt="Logo"
           className="logo-image"
         />
