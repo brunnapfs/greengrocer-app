@@ -47,7 +47,7 @@ const Register = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Cadastrar</button>
+        <button type="submit"><Link to={'/home'} className='linkCadastrar'>Cadastrar</Link></button>
       </form>
       <div className="social-login">
         <p>Ou registre-se com</p>

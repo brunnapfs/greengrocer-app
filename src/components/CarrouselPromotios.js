@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Promotions.css';
+import '../styles/Carrousel.css';
 
 const promotionsData = [
   {
@@ -43,6 +43,14 @@ const promotionsData = [
 
 const Promotions = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % promotionsData.length);
+    }, 3000); // Muda de slide a cada 3 segundos
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % promotionsData.length);

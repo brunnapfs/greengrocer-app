@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const Navbar = ({ onLogout }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     onLogout();
@@ -13,41 +14,37 @@ const Navbar = ({ onLogout }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="https://img.freepik.com/fotos-premium/diseno-logotipos-verduras-frutas-frescas-vibrantes-ia-generativa_627719-3667.jpg" alt="Logo" className="logo-image" />
-        <span className="logo-title">GreenGrocer</span>
+        <img
+          src="https://img.freepik.com/fotos-premium/diseno-logotipos-verduras-frutas-frescas-vibrantes-ia-generativa_627719-3667.jpg"
+          alt="Logo"
+          className="logo-image"
+        />
+        <span className="logo-title">
+          <Link to={'/'} className='nav-link'>GreenGrocer</Link>
+        </span>
       </div>
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link to="/" className="nav-link">Início</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/products" className="nav-link">Produtos</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/cart" className="nav-link">Carrinho</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/promotions" className="nav-link">Promoções</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/orders" className="nav-link">Meus Pedidos</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/reviews" className="nav-link">Avaliações</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/social" className="nav-link">Redes Sociais</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/profile" className="nav-link">Perfil</Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/support" className="nav-link">Suporte</Link>
-        </li>
-        <li className="nav-item">
-          <button onClick={handleLogout} className="nav-link btn-logout">Sair</button>
-        </li>
-      </ul>
+      <div className="navbar-links">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Início</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/products" className={`nav-link ${location.pathname === '/products' ? 'active' : ''}`}>Produtos</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cart" className={`nav-link ${location.pathname === '/cart' ? 'active' : ''}`}>🛒</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/profile" className={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`}>Perfil</Link>
+          </li>
+          <li className="nav-item">
+            <Link to={'/chat'} className={`nav-link ${location.pathname === '/chat' ? 'active' : ''}`}>Chat</Link>
+          </li>
+        </ul>
+      </div>
+      <div className="nav-item">
+        <button onClick={handleLogout} className="btn-logout">Sair</button>
+      </div>
     </nav>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import '../styles/Checkout.css';
+import { Link } from 'react-router-dom';
 
 const Checkout = () => {
   const { getTotalPrice } = useContext(CartContext);
@@ -54,7 +55,7 @@ const Checkout = () => {
             <option value="paypal">PayPal</option>
           </select>
         </div>
-        <button type="submit" className="btn-confirm">Confirmar Compra</button>
+        <button type="submit" className="btn-confirm"><Link to={'/Orders'} className='btnConfirmLink'>Confirmar Compra</Link></button>
       </form>
     </div>
   );

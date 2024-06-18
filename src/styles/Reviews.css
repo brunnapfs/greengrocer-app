@@ -1,12 +1,13 @@
 .reviews-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 20px;
   text-align: center;
   background-color: white;
 }
 
 .reviews {
+  margin: 5px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
@@ -19,6 +20,7 @@
   padding: 20px;
   width: 250px;
   text-align: center;
+  margin: 10px;
 }
 
 .profile-photo {

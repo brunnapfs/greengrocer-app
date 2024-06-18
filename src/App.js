@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import {Footer} from './components/Footer';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Register from './pages/Register';
@@ -15,6 +16,7 @@ import Social from './pages/Social';
 import Support from './pages/Support';
 import { CartProvider } from './context/CartContext';
 import './App.css';
+import Chat from './components/chat';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -47,8 +49,8 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/profile" element={<Profile />} />
               <Route path="/products" element={<Products />} />
+              <Route path='/profile' element={<Profile></Profile>}></Route>
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/orders" element={<Orders />} />
@@ -57,8 +59,10 @@ function App() {
               <Route path="/social" element={<Social />} />
               <Route path="/support" element={<Support />} />
               <Route path="*" element={<Navigate to="/" />} />
+              <Route path='/chat' element={<Chat/>}></Route>
             </Routes>
           </div>
+          <Footer/>
         </div>
       </Router>
     </CartProvider>

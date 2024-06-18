@@ -1,10 +1,14 @@
+/* styles/Navbar.css */
+
 .navbar {
-  background-color: #ffffff;
-  color: #105706;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-family: acumin-pro, system-ui, sans-serif;
+  background-color: #fff; /* Background branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  display: flex; /* Exibe os itens em linha */
+  justify-content: space-between; /* Espaçamento entre logo e links */
+  align-items: center; /* Alinha os itens verticalmente */
 }
 
 .logo {
@@ -13,49 +17,58 @@
 }
 
 .logo-image {
-  height: 40px;
-  margin-right: 10px;
+  width: 50px; /* Tamanho da imagem do logo */
+  margin-right: 10px; /* Espaçamento à direita */
 }
 
 .logo-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #105706;
+  font-weight: bold; /* Texto em negrito */
 }
 
 .navbar-nav {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-start;
-  margin: 0;
-  padding: 0;
+  list-style-type: none; /* Remove marcadores da lista */
+  display: flex; /* Exibe os itens em linha */
+  margin: 0; /* Remove margem padrão */
+  padding: 0; /* Remove padding padrão */
 }
 
 .nav-item {
-  margin-right: 10px;
+  margin-right: 20px; /* Espaçamento entre os itens */
 }
 
 .nav-link {
-  color: #105706;
-  text-decoration: none;
-  padding: 8px 12px;
+  color:  #2e6630; /* Cor do texto padrão */
+  text-decoration: none; /* Remove sublinhado */
+  position: relative; /* Posição relativa para o indicador ativo */
+  transition: color 0.3s ease; /* Transição de cor */
 }
 
-.nav-link:hover {
-  background-color: #e0f2f1;
-  border-radius: 5px;
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #4CAF50; /* Cor do indicador */
+  position: absolute;
+  bottom: -5px; /* Posicionamento abaixo do texto */
+  left: 0;
+  transition: width 0.3s ease; /* Transição para o indicador */
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%; /* Indicador ativo com largura total */
 }
 
 .btn-logout {
-  background: none;
+  background-color: transparent;
   border: none;
-  color: #105706;
+  color: #333; /* Cor do texto padrão */
   cursor: pointer;
-  padding: 8px 12px;
-  text-decoration: none;
+  font-size: 1.2rem; /* Tamanho da fonte */
+  transition: color 0.3s ease; /* Transição de cor */
 }
 
 .btn-logout:hover {
-  background-color: #e0f2f1;
-  border-radius: 5px;
+  color: #4CAF50; /* Cor mais escura ao passar o mouse */
 }

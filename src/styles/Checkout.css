@@ -50,9 +50,10 @@
     border-radius: 5px;
   }
   
-  .btn-confirm {
+  .btn-confirm{
+    text-decoration: none;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px;
     margin-top: 20px;
     color: #ffffff;
     background-color: #105706;
@@ -61,8 +62,24 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  .btn-confirm:hover {
+  .btn-confirm:hover{
+    cursor: pointer;
     background-color: #0a3d04;
   }
   
+  .btnConfirmLink:hover {
+    cursor: pointer;
+    background-color: #0a3d04;
+  }
+  
+  .btnConfirmLink{
+    display: inline-block;
+    padding: 5px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #105706;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }

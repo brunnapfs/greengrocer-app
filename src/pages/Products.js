@@ -39,8 +39,11 @@ const Products = () => {
   return (
     <div className="products-container">
       <div className="header">
-        <h2>Catálogo de Produtos</h2>
+        <h2 className='title_catalogos'>Catálogo de Produtos</h2>
         <div className="search-bar">
+          <div>
+          🔍
+          </div>
           <input
             type="text"
             placeholder="Buscar produtos..."
@@ -56,7 +59,7 @@ const Products = () => {
         ))}
       </div>
       <Link to="/cart" className="nav-link">
-        <button type="button">Ver Carrinho</button>
+        <button type="button" className='btnCart'>Ver Carrinho</button>
       </Link>
     </div>
   );
