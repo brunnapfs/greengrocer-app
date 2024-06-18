@@ -4,7 +4,6 @@ import '../styles/Social.css';
 
 const Social = () => {
   const handleShare = (platform) => {
-    // Lógica para compartilhar nas redes sociais
     console.log('Compartilhar no', platform);
   };
 

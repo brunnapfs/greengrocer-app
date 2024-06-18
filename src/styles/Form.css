@@ -12,12 +12,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o tamanho e sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-container:hover {
-  transform: translate(-50%, -50%) scale(1.05); /* Aumenta em 5% ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .form-container h2 {
@@ -92,6 +92,8 @@
   color: #fff;
 }
 .green-grocer{
+  font-size: 80px;
+  color: #fff;
   text-align: center;
   margin-top: 50px;
 }

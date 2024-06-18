@@ -7,7 +7,6 @@ import Reviews from './Reviews';
 import Promotions from '../components/CarrouselPromotios';
 
 const Home = () => {
-  // Função para animar elementos ao scroll
   const handleScrollAnimation = () => {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach((element) => {
@@ -17,7 +16,7 @@ const Home = () => {
     });
   };
 
-  // Função para verificar se um elemento está visível na viewport
+
   const isElementInViewport = (el) => {
     const rect = el.getBoundingClientRect();
     return (
@@ -28,10 +27,8 @@ const Home = () => {
     );
   };
 
-  // Efeito de scroll para adicionar animação ao entrar na viewport
   useEffect(() => {
     window.addEventListener('scroll', handleScrollAnimation);
-    // Limpar o listener no unmount
     return () => {
       window.removeEventListener('scroll', handleScrollAnimation);
     };

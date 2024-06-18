@@ -12,7 +12,6 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Aqui você pode adicionar a lógica para enviar os dados para o backend ou simular o registro
   };
 
   const handleChange = (e) => {

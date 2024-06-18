@@ -1,4 +1,4 @@
-// src/components/Footer.js
+
 
 import React from "react";
 import "../styles/Footer.css";
@@ -85,8 +85,7 @@ function Footer() {
         <p>&copy; 2024 GreenGrocer. All rights reserved.</p>
         <div className="legal__links">
           <span>
-            Made with <span className="heart">♥</span> remotely from
-            Anywhere
+            Made with <span className="heart">♥</span> Lucas Souza
           </span>
         </div>
       </div>

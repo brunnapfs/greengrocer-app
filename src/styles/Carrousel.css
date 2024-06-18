@@ -6,12 +6,12 @@
   text-align: center;
   margin: 20px auto;
   max-width: 1500px;
-  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-family: 'Poppins', sans-serif;
 }
 
 .promotions-container h2 {
-  font-size: 2rem; /* Tamanho da fonte */
-  color: #333; /* Cor do texto */
+  font-size: 2rem; 
+  color: #333;
   margin-bottom: 30px;
 }
 
@@ -26,8 +26,8 @@
   overflow: hidden;
   width: 100%;
   border: none;
-  border-radius: 15px; /* Bordas mais arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-track {
@@ -40,29 +40,29 @@
   box-sizing: border-box;
   padding: 20px;
   text-align: left;
-  background: #ffffff; /* Fundo branco */
-  border-radius: 15px; /* Bordas arredondadas */
+  background: #ffffff;
+  border-radius: 15px;
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .promotion-image {
   width: 100%;
-  height: 500px; /* Altura ajustada */
+  height: 500px;
   object-fit: cover;
-  border-radius: 15px; /* Bordas arredondadas */
+  border-radius: 15px; 
   margin-bottom: 15px;
 }
 
 .btn-offer {
   display: inline-block;
-  padding: 12px 24px; /* Padding ajustado */
+  padding: 12px 24px;
   margin-top: 10px;
-  background-color: #4caf50; /* Cor de fundo */
+  background-color: #4caf50;
   color: white;
   text-decoration: none;
-  border-radius: 8px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-offer:hover {
@@ -81,26 +81,26 @@
   padding: 10px;
   cursor: pointer;
   z-index: 1;
-  opacity: 0; /* Inicialmente invisível */
-  transition: opacity 0.3s; /* Suaviza a transição */
-  border-radius: 50%; /* Botões arredondados */
+  opacity: 0; 
+  transition: opacity 0.3s;
+  border-radius: 50%;
 }
 
 .carousel-button.prev {
-  left: 10px; /* Ajuste de posição */
+  left: 10px; 
 }
 
 .carousel-button.next {
-  right: 10px; /* Ajuste de posição */
+  right: 10px; 
 }
 
 .carousel:hover .carousel-button {
-  opacity: 1; /* Mostra as setas ao passar o mouse */
+  opacity: 1; 
 }
 
 @media (max-width: 600px) {
   .promotion-image {
-    height: 300px; /* Ajuste para telas menores */
+    height: 300px; 
   }
 
   .btn-offer {

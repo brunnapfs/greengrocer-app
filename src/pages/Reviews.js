@@ -8,7 +8,6 @@ const Reviews = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Avaliação enviada:', { review, rating });
-    // Aqui você pode adicionar a lógica para enviar a avaliação para o backend ou simular o envio
   };
 
   const renderStars = (count) => {

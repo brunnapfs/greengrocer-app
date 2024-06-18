@@ -9,7 +9,6 @@ const Login = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login submitted:', { email, password });
-    // Simulando a autenticação e chamando a função onLogin
     onLogin();
   };
 

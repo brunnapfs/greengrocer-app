@@ -11,7 +11,7 @@ const Notification = ({ message }) => {
       setIsVisible(true);
       setTimeout(() => {
         setIsVisible(false);
-      }, 1000); // 3000 milissegundos = 3 segundos
+      }, 1000); 
     }
   }, [message]);
 
