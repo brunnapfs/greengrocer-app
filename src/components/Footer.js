@@ -36,6 +36,8 @@ export function Footer() {
                         <li><a href="/">Mateus</a></li>
                         <li><a href="/">Melquiades</a></li>
                         <li><a href="/">Arthur</a></li>
+                        <li><a href="/">Dantas</a></li>
+                        <li><a href="/">Agenor</a></li>
                     </ul>
                 </li>
                 <li className="nav__item">

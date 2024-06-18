@@ -39,7 +39,7 @@ const Products = () => {
   return (
     <div className="products-container">
       <div className="header">
-        <h2>Catálogo de Produtos</h2>
+        <h2 className='title_catalogos'>Catálogo de Produtos</h2>
         <div className="search-bar">
           <div>
           🔍

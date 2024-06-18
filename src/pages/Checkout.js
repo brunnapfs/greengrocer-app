@@ -55,7 +55,7 @@ const Checkout = () => {
             <option value="paypal">PayPal</option>
           </select>
         </div>
-        <button type="submit" className="btn-confirm"><Link to={'/Orders'}>Confirmar Compra</Link></button>
+        <button type="submit" className="btn-confirm"><Link to={'/Orders'} className='btnConfirmLink'>Confirmar Compra</Link></button>
       </form>
     </div>
   );

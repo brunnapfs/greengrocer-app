@@ -75,3 +75,7 @@
 .btn-social:hover {
   opacity: 0.9;
 }
+.linkCadastrar{
+  text-decoration: none;
+  color: #fff;
+}
