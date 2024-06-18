@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import Spinner from '../components/Spinner';
 import '../styles/Cart.css';
-import Orders from './Orders';
 
 const Cart = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
