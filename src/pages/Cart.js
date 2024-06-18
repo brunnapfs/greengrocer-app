@@ -6,7 +6,7 @@ import '../styles/Cart.css';
 import Orders from './Orders';
 
 const Cart = () => {
-  const { cartItems, removeFromCart, getTotalPrice } = useContext(CartContext);
+  const { cartItems, removeFromCart } = useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -15,7 +15,15 @@ const Cart = () => {
     setTimeout(() => {
       setLoading(false);
       navigate('/checkout');
-    }, 2000); // Simula 2 segundos de carregamento
+    }, 1000);
+  };
+
+  const getTotalPrice = () => {
+    let totalPrice = 0;
+    cartItems.forEach(item => {
+      totalPrice += item.price * item.quantity;
+    });
+    return totalPrice.toFixed(2);
   };
 
   if (loading) {
@@ -50,9 +58,7 @@ const Cart = () => {
           </button>
         </div>
       )}
-      <span>
-        <Link to={'/Orders'} className='btnMeusPedidos'>Meus Pedidos</Link>
-      </span>
+      <Link to={'/Orders'} className='btnMeusPedidos'>Meus Pedidos</Link>
     </div>
   );
 };

@@ -1,66 +1,105 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .home-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-   
-  }
-  
-  .hero-section {
-    padding: 50px 20px;
-  }
-  
-  .hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .partners-section {
-    padding: 50px 20px;
-    background-color: #ffffff;
-  }
-  
-  .partners-section h3 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #2d3e50;
-  }
-  
-  .partners-logos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .partners-logos img {
-    height: 50px;
-    margin: 0 10px;
-  }
+/* src/styles/Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/* src/styles/Home.css */
 
-  .link{
-    text-decoration: none;
-    color: #3b5f86;
-  }
-  
-  /* src/styles/Home.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  background-color: #f9fafb;
+  color: #2d3e50;
+  scroll-behavior: smooth; /* Scroll suave */
+}
+
 .home-container {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  margin: 5px;
+  padding: 40px;
+}
+
+.home-container h2 {
+  font-size: 3em; /* Aumentando o tamanho do título principal */
+  margin-bottom: 10px;
+  color: #1b5e20; /* Verde mais escuro */
+  font-weight: 700; /* Negrito */
+}
+
+.home-container h4 {
+  font-size: 1.8em; /* Aumentando o tamanho dos subtítulos */
+  margin-bottom: 20px;
+  color: #388e3c; /* Verde vibrante */
+  font-weight: 500; /* Seminegrito */
 }
 
 .home-section {
-  max-width: 1500px;
+  width: 100%;
+  max-width: 1200px;
   margin-bottom: 30px;
-  padding: 5px;
-  margin: 5x;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff; /* Fundo branco para se destacar */
+}
+
+.home-section h4 {
+  font-size: 1.4em; /* Ajustando tamanho dos títulos das seções */
+}
+
+.partners-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 40px; /* Maior espaçamento inferior */
+}
+
+.partners-section h3 {
+  font-size: 2.5em; /* Aumentando o tamanho do título dos parceiros */
+  margin-bottom: 30px; /* Maior espaçamento inferior */
+  color: #1b5e20;
+  font-weight: 700; /* Negrito */
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Permitir quebra de linha se necessário */
+}
+
+.partners-logos img {
+  height: 80px; /* Aumentando o tamanho dos logos */
+  margin: 20px; /* Maior espaçamento entre os logos */
+  transition: transform 0.3s;
+}
+
+.partners-logos img:hover {
+  transform: scale(1.1); /* Aumentando tamanho ao passar o mouse */
+}
+
+.link {
+  text-decoration: none;
+  color: #3b5f86;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #2d3e50;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.1s ease; /* Diminui o tempo de transição para 0.4s */
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Classe para animação imediata ao carregar a página */
+.fade-in-immediate {
+  opacity: 1;
+  transform: translateY(0);
 }

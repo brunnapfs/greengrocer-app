@@ -1,3 +1,4 @@
+// src/components/Checkout.js
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 import '../styles/Checkout.css';
@@ -55,7 +56,9 @@ const Checkout = () => {
             <option value="paypal">PayPal</option>
           </select>
         </div>
-        <button type="submit" className="btn-confirm"><Link to={'/Orders'} className='btnConfirmLink'>Confirmar Compra</Link></button>
+        <button type="submit" className="btn-confirm">
+          <Link to={'/Orders'} className='btnConfirmLink'>Confirmar Compra</Link>
+        </button>
       </form>
     </div>
   );

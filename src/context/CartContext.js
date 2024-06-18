@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
       setCartItems([...cartItems, newItem]);
     }
 
-    alert(`Produto ${product.title} (${quantity}x) adicionado ao carrinho.`);
+
   };
 
   const removeFromCart = (itemId) => {

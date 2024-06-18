@@ -1,85 +1,85 @@
+/* styles/Checkout.css */
+
 .checkout-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border-left-color: #09f;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  form input,
-  form select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .btn-confirm{
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #105706;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .btn-confirm:hover{
-    cursor: pointer;
-    background-color: #0a3d04;
-  }
-  
-  .btnConfirmLink:hover {
-    cursor: pointer;
-    background-color: #0a3d04;
-  }
-  
-  .btnConfirmLink{
-    display: inline-block;
-    padding: 5px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #105706;
-    text-decoration: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-confirm {
+  padding: 10px 20px;
+  background-color: #105706;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none; /* Removido o texto sublinhado duplicado */
+}
+
+.btn-confirm:hover {
+  background-color: #0a3d04;
+}
+
+.btnConfirmLink {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #105706;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btnConfirmLink:hover {
+  background-color: #0a3d04;
+}

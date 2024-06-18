@@ -1,29 +1,35 @@
 /* styles/Chat.css */
+
 .chat-container {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
-  margin: 0 auto;
-  height: 500px;
+  margin: 20px auto;
+  height: 80vh; /* Ajuste para altura responsiva */
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   font-family: Arial, sans-serif;
+
+  /* Background degradê */
+  background: linear-gradient(135deg, #2980b9, #2c3e50);
 }
 
 .chat-header {
-  background-color: #4CAF50;
+  background-color: #2d88ff; /* Azul mais escuro */
   color: white;
   padding: 10px;
   text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .chat-messages {
   flex: 1;
   padding: 10px;
   overflow-y: auto;
-  background: #f9f9f9;
+  background: #f0f0f0; /* Cinza mais claro */
 }
 
 .chat-messages ul {
@@ -37,23 +43,27 @@
   border-radius: 5px;
   margin-bottom: 10px;
   max-width: 80%;
+  word-wrap: break-word; /* Quebra de palavra */
 }
 
 .message.client {
-  background-color: #d1e7dd;
+  background-color: #e2f3fb; /* Azul claro para mensagens do cliente */
   margin-left: auto;
   text-align: right;
 }
 
 .message.server {
-  background-color: #f8d7da;
+  background-color: #fdecea; /* Vermelho claro para mensagens do servidor */
 }
 
 .chat-input {
   display: flex;
+  align-items: center;
   padding: 10px;
   background: #fff;
   border-top: 1px solid #ddd;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .input-message {
@@ -62,18 +72,19 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-right: 10px;
+  font-size: 1rem; /* Tamanho da fonte */
 }
 
 .btn-send {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #4CAF50;
+  padding: 10px 20px;
+  background-color: #2d88ff; /* Azul mais escuro */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn-send:hover {
-  background-color: #45a049;
+  background-color: #1d6ba8; /* Tom mais escuro do azul para hover */
 }

@@ -1,38 +1,46 @@
 
 .form-container {
   height: 600px;
-  max-width: 600px; 
+  width: 600px;
+  max-width: 80%;
   margin: 0 auto;
-  padding: 30px; 
+  padding: 30px;
   border: 1px solid #ccc;
-  border-radius: 20px; 
+  border-radius: 20px;
   text-align: center;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o tamanho e sombra */
+}
+
+.form-container:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Aumenta em 5% ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
 }
 
 .form-container h2 {
-  margin-bottom: 20px;
+  margin-top: 70px;
+  margin-bottom: 30px;
 }
 
 .form-container form {
+  padding: 0px;
   display: flex;
   flex-direction: column;
 }
 
 .form-container input,
 .form-container button {
-  width: 500px;
-  margin: 20px;
+  width: 550px;
+  margin: 10px;
   padding: 10px;
   font-size: 16px;
 }
 
 .form-container button {
-  width: 500px;
+  width: 100%;
   margin-top: 30px;
   background-color: #4caf50;
   color: white;
@@ -65,10 +73,14 @@
 }
 
 .btn-facebook {
+  border: none;
+  border-radius: 10px;
   background-color: #3b5998;
 }
 
 .btn-google {
+  border: none;
+  border-radius: 10px;
   background-color: #db4437;
 }
 
@@ -78,4 +90,8 @@
 .linkCadastrar{
   text-decoration: none;
   color: #fff;
+}
+.green-grocer{
+  text-align: center;
+  margin-top: 50px;
 }

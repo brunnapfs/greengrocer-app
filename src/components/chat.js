@@ -1,6 +1,6 @@
+// src/components/Chat.js
 import React, { useState, useEffect } from 'react';
 import '../styles/Chat.css';
-import Profile from '../pages/Profile';
 
 function Chat() {
   const [clientId] = useState(Date.now());

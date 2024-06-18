@@ -1,3 +1,4 @@
+// src/components/Navbar.js
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
@@ -14,13 +15,9 @@ const Navbar = ({ onLogout }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img
-          src="/greegrocer.ico"
-          alt="Logo"
-          className="logo-image"
-        />
+        <img src="/greegrocer.ico" alt="Logo" className="logo-image" />
         <span className="logo-title">
-          <Link to={'/'} className='nav-link'>GreenGrocer</Link>
+          <Link to="/" className='nav-link'>GreenGrocer</Link>
         </span>
       </div>
       <div className="navbar-links">
@@ -38,7 +35,7 @@ const Navbar = ({ onLogout }) => {
             <Link to="/profile" className={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`}>Perfil</Link>
           </li>
           <li className="nav-item">
-            <Link to={'/chat'} className={`nav-link ${location.pathname === '/chat' ? 'active' : ''}`}>Chat</Link>
+            <Link to="/chat" className={`nav-link ${location.pathname === '/chat' ? 'active' : ''}`}>Chat</Link>
           </li>
         </ul>
       </div>

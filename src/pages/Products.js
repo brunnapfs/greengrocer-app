@@ -1,6 +1,9 @@
+// src/pages/Products.js
+
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
+import Notification from '../components/Notification';
 import { CartContext } from '../context/CartContext';
 import '../styles/Product.css';
 
@@ -8,6 +11,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const { addToCart } = useContext(CartContext);
+  const [notificationMessage, setNotificationMessage] = useState('');
 
   useEffect(() => {
     const simulatedProducts = [
@@ -36,31 +40,34 @@ const Products = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    setNotificationMessage(`Produto "${product.title}" adicionado ao carrinho!`);
+  };
+
   return (
     <div className="products-container">
       <div className="header">
         <h2 className='title_catalogos'>Catálogo de Produtos</h2>
         <div className="search-bar">
-          <div>
-          🔍
-          </div>
+          <i className="fa fa-search" aria-hidden="true"></i> {/* Ícone de busca */}
           <input
             type="text"
             placeholder="Buscar produtos..."
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <i className="fa fa-search"></i>
         </div>
       </div>
       <div className="product-list">
         {filteredProducts.map(product => (
-          <ProductCard key={product.id} product={product} addToCart={addToCart} />
+          <ProductCard key={product.id} product={product} addToCart={() => handleAddToCart(product)} />
         ))}
       </div>
-      <Link to="/cart" className="nav-link">
+      <Link to="/cart">
         <button type="button" className='btnCart'>Ver Carrinho</button>
       </Link>
+      <Notification message={notificationMessage} />
     </div>
   );
 };
